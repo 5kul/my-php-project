@@ -59,10 +59,12 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
 $query = "SELECT * FROM students WHERE name LIKE '%$search%' OR course LIKE '%$search%'";
 
 $result = mysqli_query($conn, $query);
+//  Start ID from 1
+$ID = 1;
 
 while($row = mysqli_fetch_assoc($result)){
     echo "<tr>
-            <td>{$row['id']}</td>
+            <td>" . $ID++ . "</td>
             <td>{$row['name']}</td>
             <td>{$row['email']}</td>
             <td>{$row['phone']}</td>
