@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 <head>
     <title>Edit Student</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <h1>Edit Student</h1>
@@ -48,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Phone: <input type="text" name="phone" value="<?= $student['phone'] ?>"><br><br>
     Course: <input type="text" name="course" value="<?= $student['course'] ?>"><br><br>
     <button type="submit">Update Student</button>
+    <a href="index.php" style="text-decoration:underline;">Back to Home</a>
 </form>
-<a href="index.php">Back to Home</a>
 </body>
 </html>

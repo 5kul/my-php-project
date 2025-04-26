@@ -6,15 +6,42 @@ include 'session.php';
 <html>
 <head>
     <title>Student Management</title>
+   <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <h1>Student Management System</h1>
 
 <?php displaySessionMessage(); ?>
 
-<a href="add.php">Add New Student</a>
+
 <form method="GET" action="">
-    <input type="text" name="search" placeholder="Search by name or course" value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>">
+<a href="add.php">Add New Student</a>
+<input type="text" name="search" placeholder="Search by name or course" value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>">
     <button type="submit">Search</button>
 </form>
 
